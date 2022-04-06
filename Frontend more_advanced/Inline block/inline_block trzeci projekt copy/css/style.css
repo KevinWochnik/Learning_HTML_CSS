@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+nav a {
+  display: inline-block;
+  width: 25%;
+  font-size: 18px;
+  padding: 10px 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border: 2px solid transparent;
+}
+
+nav a.btn1 {
+  background-color: burlywood;
+}
+
+nav a.btn2 {
+  background-color: deepskyblue;
+}
+
+nav a.btn3 {
+  background-color: darkcyan;
+}
+
+nav a.btn4 {
+  background-color: royalblue;
+}
+
+nav a:hover {
+  border-color: black;
+  color: black;
+}
+
+header {
+  height: 300px;
+  background-color: cadetblue;
+}
+
+main {
+  min-height: 50vh;
+  background-color: burlywood;
+}
+
+footer {
+  min-height: 100px;
+  background-color: darkcyan;
+}
+/*# sourceMappingURL=style.css.map */

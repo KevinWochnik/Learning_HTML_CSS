@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider/Banner</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-family: Arial;
+            font-size: 10px;
+        }
+        .team{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: #ccc;
+            
+        }
+        .team img.color{
+            position: absolute;
+            bottom: 0;
+            right: -5%;
+            height: 36%;
+            z-index: 1;
+            animation: color 4s linear infinite;
+        }
+        .team img.gray{
+            position: absolute;
+            bottom: 0;
+            left: -70%;
+            height: 110%;
+            opacity: .3;
+            animation: 4s gray linear infinite;
+            
+        }
+        .team .member{
+            position: absolute;
+            left: auto;
+            top: 10%;
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: text 4s linear infinite;
+        }
+        .team h1{
+            font-size: 3rem;
+        }
+        .team h2{
+            font-size: 1.8rem;
+            margin-top: 5px;
+        }
+        
+        @media (min-width:1025px){
+            .team h1{
+            font-size: 6rem;
+        }
+        .team h2{
+            font-size: 3rem;
+            margin-top: 10px;
+        }
+        }
+        @media (orientation: landscape){
+            .team img.color{
+            right: 3%;
+            height: 56%;
+        }
+        .team img.gray{
+            bottom: -10%;
+            left: -15%;
+            height: 150%;
+        }
+        .team .member{
+            top: 10%;
+            left: 40%;  
+            width: 60%;
+        }
+        }
+
+        @keyframes color{
+            0%{
+                transform: translateX(0);
+                opacity: 0;
+            }
+            8%{
+                opacity: 0;
+            }
+            13%{
+                opacity: 1;
+            }
+            87%{
+                opacity: 1;
+            }
+            92%{
+                opacity: 0;
+            }
+            100%{ transform: translateX(-5%);
+            opacity: 0;
+            }
+        }
+        @keyframes gray{
+            0%{
+                transform: translateX(0) scale(1);
+                opacity: 0;
+            }
+            8%{
+                opacity: 0;
+            }
+            13%{
+                opacity: .3;
+            }
+            87%{
+                opacity: .3;
+            }
+            92%{
+                opacity: 0;
+            }
+            100%{ transform: translateX(5%) scale(1.1);
+            opacity: 0;
+            }
+        }
+        @keyframes text{
+            0%{
+                transform: scale(1);
+                opacity: 0;
+            }
+            8%{
+                opacity: 0;
+            }
+            13%{
+                opacity: 1;
+            }
+            87%{
+                opacity: 1;
+            }
+            92%{
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="team">
+    <img src="/Dzień 15/ProjektSliderPo1etapie/img/s1.png" alt="dziewczyna 1 kolor" class="color">
+    <img src="/Dzień 15/ProjektSliderPo1etapie/img/s1a.png" alt="dziewczyna 1 szara" class="gray">
+    <div class="member">
+        <h1>Anna Baugrat</h1>
+        <h2>Programistka JS</h2>
+    </div>
+    </section>
+
+    <script>
+
+        //Parametry 
+        let activeElement = 0;
+
+        //pobieramy 4 elementy na których pracujemy
+        const colorImgHtml = document.querySelector('img.color');
+        const grayImgHtml = document.querySelector('img.gray');
+        const h1Html = document.querySelector('.member h1');
+        const h2Html = document.querySelector('.member h2');
+    
+        //informacje w tablicach o elementach podmienianych
+        const colorImages = ['/Dzień 15/ProjektSliderPo1etapie/img/s1.png','/Dzień 15/ProjektSliderPo1etapie/img/s2.png', '/Dzień 15/ProjektSliderPo1etapie/img/s3.png'];
+        const greyImages = ["/Dzień 15/ProjektSliderPo1etapie/img/s1a.png","/Dzień 15/ProjektSliderPo1etapie/img/s2a.png","/Dzień 15/ProjektSliderPo1etapie/img/s3a.png"];
+        const names = ['Anna Baugart', 'Marek Feliksiak', 'Arek Pawłowicz'];
+        const profession = ['Programistka JS', 'UX i UI Deisgner', 'FrontEnd Developer'];
+
+        function changeElement(){
+            activeElement++;
+            if(activeElement == colorImages.length){
+                activeElement = 0;
+            }
+
+            colorImgHtml.src = colorImages[activeElement];
+            grayImgHtml.src = greyImages[activeElement];
+            h1Html.textContent = names[activeElement];
+            h2Html.textContent = profession[activeElement];
+        }
+
+        changeElement()
+
+        setInterval(changeElement, 4000)
+    </script>
+</body>
+</html>

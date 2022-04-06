@@ -1,0 +1,19 @@
+.board
+    +position(absolute, 50%, 50%)
+    transform: $transform
+    width: 200px
+    height: 200px
+    background-color: $bgc
+    border: 10px solid black
+
+    span:nth-of-type(1)
+        +span()
+        top: 0
+        left: 0
+        
+    span:nth-of-type(4)
+        +span()
+        bottom: 0
+        right: 0
+
+        

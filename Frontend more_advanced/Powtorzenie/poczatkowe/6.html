@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            position: fixed;
+            transform: translateX(-100%)
+        }
+        .x{
+            top: 5%;
+            right: 5%;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 60px;
+            font-family: arial;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+        .left{
+            height: 100vh;
+            width: 300px;
+            background-color: #000;
+        }
+        button.active{
+            transform: rotate(45deg)
+        }
+        div.active{
+            transform: translateX(0%)
+        }
+    </style>
+</head>
+<body>
+    <div class="x">+</div>
+    <div class="left"></div>
+    <script>
+        const hamburger = document.querySelector('.x');
+        const menuBar = document.querySelector('.left');
+
+        function burger(){
+            hamburger.classList.toggle('active');
+            menuBar.classList.toggle('active');
+        }
+        
+        hamburger.addEventListener('mouseover', burger);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            position: absolute;
+            height: 300px;
+            width: 200px;
+        }
+        .jeden{
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(130, 90, 150);
+            /* overflow: hidden; */
+        }
+        .dwa{
+            top: calc(40% + 300px);
+            left: 50%;
+            transform: translate(-50%, -40%);
+            background-color: rgba(77, 199, 93, .5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jeden">
+    <div class="dwa"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, tenetur.</p></div>
+    </div>
+
+    <script>
+            const pierwszy = document.querySelector('.jeden');
+            const drugi = document.querySelector('.dwa');
+
+            const wjazd = -140;
+            const wyjazd = -40;
+            const lewo = -50
+            const kolor = 'red'
+            const trans = 1;
+
+            function wjechanie(){
+                drugi.style.transition = trans + 's';
+                drugi.style.transform = 'translate(' + lewo +'%' + ','+ wjazd + '%)';
+                drugi.style.backgroundColor = kolor;
+            }
+            
+            pierwszy.addEventListener('mouseover', wjechanie);
+
+
+
+
+    </script>
+</body>
+</html>

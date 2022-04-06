@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section:nth-of-type(1){
+            height: 400px;
+            width: 100%;
+            background-color: royalblue;
+        }
+        
+        section:nth-of-type(2){
+            height: 200px;
+            width: 100%;
+            background-color: cadetblue;
+        }
+        
+        section:nth-of-type(3){
+            height: 800px;
+            width: 100%;
+            background-color: rosybrown;
+        }
+        
+        section:nth-of-type(4){
+            height: 1020px;
+            width: 100%;
+            background-color: sandybrown;
+        }
+        
+        section:nth-of-type(5){
+            height: 980px;
+            width: 100%;
+            background-color: aqua;
+        }
+
+        .haslo{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 80px;
+            width: 100%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 30px;
+            line-height: 80px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+        <section class="sekcja1"></section>
+        <section class="sekcja2"></section>
+        <section class="sekcja3"></section>
+        <section class="sekcja4"></section>
+        <section class="sekcja5"></section>
+        <div class="haslo">WITAJ NA STRONIE</div>
+<script src="/jquery-3.6.0.min.js"></script>
+<script>
+    function nazwa(){
+        const scroll = $(document).scrollTop();
+
+        const wysokosc1 = $('.sekcja1').height();
+        const wysokosc2 = $('.sekcja2').height();
+        const wysokosc3 = $('.sekcja3').height();
+        const wysokosc4 = $('.sekcja4').height();
+        const wysokosc5 = $('.sekcja5').height();
+        
+        const offSet1 = $('.sekcja1').offset().top;
+        const offSet2 = $('.sekcja2').offset().top;
+        const offSet3 = $('.sekcja3').offset().top;
+        const offSet4 = $('.sekcja4').offset().top;
+
+        if(scroll<wysokosc1){
+            $('div.haslo').text('sekcja1')
+        }
+
+        else if(scroll<wysokosc2 + offSet2){
+            $('div.haslo').text('sekcja2')
+        }
+
+        else if(scroll<wysokosc3 + offSet3){
+            $('div.haslo').text('sekcja3')
+        }
+
+        else if(scroll<wysokosc4 + offSet4){
+            $('div.haslo').text('sekcja4')
+        }
+
+        else{
+            $('div.haslo').text('sekcja5')
+        }
+    }
+    $(document).on('scroll', nazwa)
+</script>
+</body>
+</html>

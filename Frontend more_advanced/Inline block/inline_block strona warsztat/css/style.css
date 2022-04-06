@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@100;400&display=swap');
+/* font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+header{
+  height: 40vh;
+  background-image: url(/inline_block\ strona\ warsztat/auto2.jpg);
+  background-size: cover;
+}
+
+header h1{
+  font-size: 6rem;
+  line-height: 40vh;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: rgba(0,0,0,.3)
+}
+
+nav{
+  max-width: 1440px;
+  margin: 30px auto;
+  text-align: right;
+}
+
+nav a{
+  display: inline-block;
+  font-size: 1.8rem;
+  font-family: 'Roboto';
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555;
+  padding: 10px;
+  margin: 0 20px;
+}
+nav a.reservation{
+  padding: 10px 30px;
+  font-size: 2.2rem;
+  border: 2px solid #555;
+  letter-spacing: 1px;
+  margin-right: 80px;
+  margin-left: 50px;
+  transition: .1s
+}
+
+nav a:hover{
+  border-bottom: 2px solid black;
+  color: black
+}
+nav a.reservation:hover{
+  background-color: royalblue;
+  color: #eee;
+  transform: scale(1.02)
+}
+
+/* MAIN */
+
+main{
+  max-width: 1440px;
+  margin: 5vh auto;
+  font-size: 0;
+}
+main p.description{
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0 5% 5% 5%;
+}
+
+main div.feature{
+  display: inline-block;
+  width: 33.333%;
+}
+
+main div.image{
+  height: 200px;
+  background-color: royalblue;
+  margin: 20px; 
+}
+
+main h2{
+  font-size: 2rem;
+  text-align: center;
+  color: #222;
+}
+/* FOOTER */
+
+footer p{
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+}

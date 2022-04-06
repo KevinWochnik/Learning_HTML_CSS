@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        button{
+            font-size: 40px;
+        }
+        h1{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 80px;
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            transition: .5s;
+            border: 0px solid black;
+        }
+        h1.duzy{
+            transform:scale(2);
+        }
+        h1.maly{
+            font-size: 40px;
+        }
+        button.larger:hover ~ h1{
+            transform: scale(2);
+        }
+        button.smaller:hover ~ h1{
+            transform: scale(.5);
+        }
+        button.border:hover ~ h1{
+           border: 10px solid black;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.larger').click(function() {
+            $('h1').toggleClass("duzy");
+        })
+        $('.smaller').click(function() {
+            $('h1').toggleClass("maly");
+        })
+    </script>
+</head>
+<body>
+    <button class="larger">2xWiększy</button>
+    <button class="smaller">2xMniejszy</button>
+    <button class="border">Obramowanie</button>
+    <h1>Nazwa</h1>
+</body>
+</html>

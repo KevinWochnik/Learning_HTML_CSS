@@ -1,0 +1,43 @@
+header {
+  height: 30vh;
+  background-color: #e45;
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+}
+
+header div.small {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+header div.medium {
+  width: 250px;
+  height: 250px;
+  border-radius: 40%;
+  background-color: blue;
+}
+
+header div.large {
+  width: 350px;
+  height: 350px;
+  border-radius: 30%;
+  background-color: green;
+}
+
+nav {
+  height: 30vh;
+}
+
+nav ul {
+  background-color: #333;
+}
+
+nav ul li {
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */

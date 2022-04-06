@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button{
+            position: absolute;
+            top: 10%;
+            height: 40px;
+            width: 100px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10%;
+            font-family: serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .ruch{
+            left: 25%;
+        }
+        .kolor{
+            left: 35%;;
+        }
+        .rozmiar{
+            left: 45%;
+        }
+
+        div{
+            position: absolute;
+            top: 50%;
+            height: 60px;
+            width: 60px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .pierwszy{
+            left: 25%;
+            animation: ruszaj 3s infinite alternate linear;
+            animation-play-state: paused;
+        }
+        .drugi{
+            left: 75%;
+            animation: ruszaj2 3s infinite alternate linear;
+            animation-play-state: paused;
+        }
+        .red{
+            background-color: rgb(204, 28, 28);
+        }   
+        .green{
+            background-color: rgb(21, 105, 21);
+        }
+        .wielkość{
+            height: 120px;
+            width: 120px;
+        }
+        .animacja{
+            animation-play-state: running;
+        }
+        @keyframes ruszaj{
+            
+            50%{
+                top:25%;
+                left: 50%;
+            }
+            100%{
+                top: 50%;
+                left: 75%;
+            }
+        }
+        
+        @keyframes ruszaj2{
+            
+            50%{top:75%;
+                left: 50%;}
+            100%{
+                top: 50%;
+                left: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="ruch">ruch</button>
+    <button class="kolor">kolor</button>
+    <button class="rozmiar">rozmiar</button>
+    <div class="pierwszy"></div>
+    <div class="drugi"></div>
+
+    <script>
+        const buttonOne = document.querySelector('.ruch');
+        const buttonTwo = document.querySelector('.kolor');
+        const buttonThree = document.querySelector('.rozmiar');
+        const divOne = document.querySelector('.pierwszy');
+        const divTwo = document.querySelector('.drugi');
+
+        let pauza = 'running';
+        const animate = '.5s'
+
+        function ruszajcie(){
+            // divOne.style.animationPlayState = pauza;
+            // divTwo.style.animationPlayState = pauza;
+            divOne.classList.toggle('animacja');
+            divTwo.classList.toggle('animacja');
+            divOne.style.transition = animate;
+            divTwo.style.transition = animate;
+        }
+        function kolorek(){
+            divOne.classList.toggle('red');
+            divTwo.classList.toggle('green');
+        }
+        function duzy(){
+            divOne.classList.toggle('wielkość');
+            divTwo.classList.toggle('wielkość');
+        }
+
+        buttonOne.addEventListener('click', ruszajcie);
+        buttonTwo.addEventListener('click', kolorek);
+        buttonThree.addEventListener('click', duzy);
+
+
+    </script>
+</body>
+</html>

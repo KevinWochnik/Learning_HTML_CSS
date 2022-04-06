@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px 50px;
+}
+button{
+    border: 3px solid black;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color:black;
+    background-color: transparent;
+    margin:0 30px 30px 0;
+    font-size: 40px;
+}
+.box{
+    float: left;
+    background-color: cadetblue;
+    width: 100px;
+    height: 100px;
+    animation: create .2s linear normal both;
+}
+@keyframes create {
+    0%{
+        width: 0;
+        height: 0;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+        transform: rotate(360deg);
+    }
+}
+        
+    </style>
+</head>
+<body>
+        <button class="js">dawaj JS!</button>
+        <button class="jq">dawaj JQ!</button>
+        <br>
+<script>
+
+    const buttonJS = document.querySelector('.js');
+
+    // const buttonJQ = document.querySelector('.jq');
+
+    function createDiv(){
+        const divItem = document.createElement('div');
+        divItem.classList.add('box');
+        document.body.appendChild(divItem);    
+    }
+
+    buttonJS.addEventListener('click', createDiv);
+
+    const divItem = document.createElement('div');
+
+    // divItem.id = 'black'; 
+    // divItem.classList.add('box');
+    // divItem.setAttribute('class', 'box')
+
+    // document.body.appendChild(divItem);
+    
+    
+</script>
+</body>
+</html>

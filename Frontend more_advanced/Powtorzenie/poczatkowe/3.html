@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button{
+            position: fixed;
+            height: 40px;
+            width:100px;
+            top: 20px;
+            left: 20px;
+            background-color: cadetblue;
+            color: white;
+            font-size: 18px;
+            border: 2px solid whitesmoke;
+        }
+        .display{
+            position: fixed;
+            top:10%;
+            left: 47.5%;
+            width: 20%;
+
+        }
+        .cloud{
+            position: fixed;
+            top: 0;
+            left: calc(50% - 200px);
+            width: 400px;
+            height: 10%;
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+        .ground{
+            position: fixed;
+            bottom: 0;
+            left: calc(50% - 200px);
+            width: 400px;
+            height: 10%;
+            background-color: darkgreen;
+            border-radius: 10%;
+        }
+        .raindrops{
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: royalblue;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="rain">DESZCZ</button>
+    <div class="display"></div>
+    <div class="cloud"></div>
+    <div class="ground"></div>
+    <script>
+
+        const button = document.querySelector('button');
+        const line = document.querySelector('.display')
+
+        function rain(){
+            const drops = document.createElement('div')
+            drops.classList.add('raindrops')
+            line.appendChild(drops);
+        }
+        button.addEventListener('click', rain);
+
+
+    </script>
+</body>
+</html>

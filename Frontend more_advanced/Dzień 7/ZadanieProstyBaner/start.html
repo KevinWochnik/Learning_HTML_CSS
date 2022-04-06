@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <style>
+     *{
+         margin: 0;
+         padding: 0;
+     }
+  img {
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+  }
+  img:nth-last-of-type(1){
+      opacity: 1;
+      animation: obraz 6s linear infinite;
+  }
+  @keyframes obraz {
+      0%{
+          opacity: 1;
+      }
+      33%{
+          opacity: 1;
+      }
+      50%{
+          opacity: 0;
+      }
+      83.33%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+
+  
+  }
+ </style>
+</head>
+
+<body>
+ <img src="img1.jpg" alt="">
+ <img src="img2.jpg" alt="">
+</body>
+
+</html>

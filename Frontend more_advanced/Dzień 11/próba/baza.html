@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. POBIERANIE ELEMENTÓW Z DOM @@@@@@@@@@@@@
+
+
+        // const/let zmienna = document.querySelector('nazwa/klasa')
+        const btn = document.querySelector('button');
+
+
+        
+        // 2. PISZEMY PARAMETRY GŁÓWNE ZAWIERAJĄCE JAKIEŚ NUMERY/STRINGI/BOOLEANY @@@@@@@@
+
+        let/const nazwa = 28;       'number'
+        let/const nazwa = 'nazwa';  'string'
+        let/const nazwa = true;     'boolean'
+
+        let textSize = 16;
+
+        myAge = 23;
+ 
+        // PROSTE SKŁADNIE
+
+        let za5lat = myAge +5;
+
+        // przypisanie samego fontsize
+        text.style.fontSize = textSize + 'px';
+
+
+
+        // 4. PISZEMY FUNKCJĘ (GDY BĘDZIEMY JEJ WIĘCEJ RAZY UŻYWAĆ) @@@@@@@@@@@@@@@@@@@
+
+
+        // przypisanie wielkości tekstu
+        function textIncrease(){
+            text.style.fontSize = '30px';
+
+            text.style.fontSize = textSize+'px';
+        }
+
+
+
+        // powiększenie wielkości tekstu o jeden
+        function textIncrease(){
+            text.style.fontSize = textSize+'px';   //konkatenacja - połączenie liczby i string
+            textSize++;
+        }
+        // (textSize++) - dodaje +1 za każdym razem jak jest kliknięty ponownie
+
+
+
+
+        // pomniejszeie wielkości tekstu o jeden
+        function textDecrease(){
+            text.style.fontSize = textSize+'px';   //konkatenacja - połączenie liczby i string
+            textSize--;
+        }
+        // (textSize--) - dodaje -1 za każdym razem jak jest kliknięty ponownie
+
+
+        // zmiana kolor np tła poprzez DODANIE KLASY (przełączenie spowoduje zmianę)
+        function changeColor(){
+            firstDiv.classList.toggle('red');
+            secondDiv.classList.toggle('red');
+        }
+
+        // DODANIE KLASY
+        function changeColor(){
+            firstDiv.classList.add('blue');
+        }
+
+        // ODJĘCIE KLASY
+        function changeColor(){
+            firstDiv.classList.remove('blue');
+        }
+
+
+
+        // THIS
+        this - to co zostało kliknięte
+
+        // zmiana koloru tła za pomocą THIS
+        function changeColor(){
+                    this.classList.toggle('red');
+                }
+
+
+
+
+
+        // 3. PODPINAMY NASŁUCHIWANIE I UMIESZCZAMY W NIM FUNKCJĘ ANONIMOWĄ @@@@@@@@@@@@@@@@
+
+        // nasłuchiwanie na powiekszajacy button
+        btnIncrease.addEventListener('click', textIncrease)
+
+        // nasłuchiwanie na pomniejszający button
+        btnDecrease.addEventListener('click', textDecrease)
+
+        // toggle klasa
+        function changeColor(){
+            first.Div.classList.toggle('red');
+        }
+
+        // zmiana koloru np tła
+        firstDiv.addEventListener('click', changeColor);
+        secondDiv.addEventListener('click', changeColor);
+
+
+        
+        
+
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

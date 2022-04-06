@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div+div {
+            font-family: arial;
+        }
+
+        p+p {
+            color: yellow;
+        }
+
+        p+p+p {
+            color: blue;
+        }
+
+        p~p {
+            color: yellow;
+        }
+
+        div>div>p {
+            color: yellow;
+        }
+
+        div>p {
+            color: yellow;
+        }
+
+        div * p {
+            color: yellow;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <div>
+        <p>Tekst 1</p>
+        <p>Tekst 2</p>
+    </div>
+
+    <div>
+        <p>Tekst 3</p>
+        <p>Tekst 4</p>
+        <p>Tekst 5</p>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

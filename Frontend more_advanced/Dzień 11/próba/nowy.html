@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button{
+            position: absolute;
+            top: 7%;
+            left: 7%;
+            padding: 10px 30px;
+            background-color: white;
+            border: 3px solid black;
+        }
+        .drugi{
+            left: 17%;
+        }
+        div.square{
+            position: absolute;
+            top: 50%;
+            left: 25%;;
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="pierwszy">przenieś</button>
+    <button class="drugi">z powrotem</button>
+    <div class="square"></div>
+
+    <script>
+
+        let odleglosc = 50;
+        let powrot = -50;
+        const dalej = 10; 
+        const blizej = -10;
+        const kolor1 = 'red';
+        const kolor2 = 'black';
+
+        const pierwszyButton = document.querySelector('.pierwszy');
+        const drugiButton = document.querySelector('.drugi');
+        const kwadrat = document.querySelector('.square');
+
+        function doPrzodu(){
+            kwadrat.style.transform = 'translateX('+ odleglosc +'%)';
+            kwadrat.style.backgroundColor = kolor1;
+            odleglosc = odleglosc + dalej;
+        }
+
+        function doTylu(){
+            kwadrat.style.transform = 'translateX('+ powrot +'%)';
+            kwadrat.style.backgroundColor = kolor2;
+            powrot = powrot + blizej;
+        }
+
+        pierwszyButton.addEventListener('click', doPrzodu);
+        drugiButton.addEventListener('click', doTylu);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    /*    box-sizing: border-box:*/
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/*nawigacja*/
+nav {
+    max-width: 1440px;
+    margin: 30px auto;
+    text-align: right;
+    /*    background-color: grey;        padding-right: 100px;*/
+}
+
+nav a {
+    font-size: 1.8rem;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #555;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+nav a.reservation {
+    font-size: 2.2rem;
+    border: 2px solid #555;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    margin-right: 50px;
+    margin-left: 80px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+nav a.reservation:hover {
+    background-color: royalblue;
+    color: #eee;
+    border-color: royalblue;
+}
+
+
+/*header*/
+header {
+    background-image: url('auto2.jpg');
+    height: 40vh;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+/*main*/
+main {
+    max-width: 1440px;
+    margin: 5vh auto;
+    font-size: 0;
+}
+
+main p.description {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 30px 50px 30px;
+    line-height: 180%
+}
+
+main section.features {
+    background-color: beige;
+    padding: 30px 0;
+}
+
+main div.feature {
+    display: inline-block;
+    width: 33.3333%;
+    margin: 0 auto;
+}
+
+main div.image {
+    height: 200px;
+    background-color: royalblue;
+    margin: 20px 30px;
+    ;
+}
+
+main div.image:hover {
+    background-color: aqua;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #222;
+}
+
+/*footer*/
+
+footer {
+    background-color: #000;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+}

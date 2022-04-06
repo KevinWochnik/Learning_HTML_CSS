@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+            grid-template-rows: 30px 30px 25vh 80px 1fr 25vh 40px;
+            grid-template-areas: 
+            "covid covid covid covid covid"
+            "nav nav nav nav nav"
+            "header header header header header"
+            ". info info info ."
+            ". picture picture picture ."
+            "koniec koniec koniec koniec koniec"
+            "footer footer footer footer footer";
+            
+        }
+        div.covidInfo{
+            background-color: black;
+            grid-area: covid;
+        }
+        .navHeader{
+            background-color: rgb(194, 31, 31);
+            grid-area: nav;
+        }
+        header.opening{
+            background-color: royalblue;
+            grid-area: header;
+        }
+        section.info{
+            background-color: green;
+            grid-area: info;
+        }
+        .pictures{
+            /* background-color: blue; */
+            grid-area: picture;
+            display: flex;
+            font-display: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .podsumowanie{
+            background-color: yellow;
+            grid-area: koniec;
+        }
+        .connections{
+            background-color: darkgrey;
+            grid-area: footer;
+        }
+        .obraz{
+            height: 100%;
+            width: 25%;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: flex-start;
+        }
+        .opis1,.opis2,.opis3{
+            background-color: pink;
+            width: 100%;
+            height: 20%;
+        }
+        img{
+            height: 80%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="covidInfo"></div>
+    <nav class="navHeader"></nav>
+    <header class="opening"></header>
+    <section class="info"></section>
+    <section class="pictures">
+        <div class="obraz">
+            <img src="" alt="" class="picture1">
+            <h1 class="opis1"></h1>
+        </div>
+        <div class="obraz">
+            <img src="" alt="" class="picture2">
+            <h1 class="opis2"></h1>
+        </div>
+        <div class="obraz">
+            <img src="" alt="" class="picture3">
+            <h1 class="opis3"></h1>
+        </div class="obraz">
+    </section>
+    <div class="podsumowanie">
+        <h1 class="summaryInfo"></h1>
+        <button class="summary"></button>
+    </div>
+    <footer class="connections"></footer>
+</body>
+</html>
+
+
+<!-- grid – 8 wierszy, 5 kolumn
+
+section
+nav – media, about, shop, galeria, contact
+header – zdjęcie, opis, button
+section – małe zdjęcia + opisy
+section – duże zdjęcia, opis, link
+footer – informacje kontaktowe -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            position: relative;
+            top: 25vh;
+            left: 40vw;
+            display: block;
+            font-size: 40px;
+            line-height: 70px;
+            padding: 0 40px;
+            background-color: #fff;
+            border: 3px solid black;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        button::after{
+            content: "";
+            position: absolute;
+            display: block;
+            top: 10%;
+            left: -27%;
+            height: 62px;
+            width: 62px;
+            background-color: black;
+            transform: rotate(45deg) skew(20deg, 20deg);
+            transition: .1s;
+        }
+        button:hover::after{
+            left: -18%;
+        }
+
+    </style>
+</head>
+<body>
+    <button>przycisk</button>
+    
+</body>
+</html>

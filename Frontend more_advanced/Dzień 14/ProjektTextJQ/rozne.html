@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section:nth-of-type(1){
+            height: 400px;
+            padding: 200px;
+            width: 100%;
+            background-color: royalblue;
+        }
+        
+        section:nth-of-type(2){
+            height: 200px;
+            border: 50px solid white;
+            width: 100%;
+            background-color: cadetblue;
+        }
+        
+        section:nth-of-type(3){
+            height: 800px;
+            margin: 30px 0;
+            width: 100%;
+            background-color: rosybrown;
+        }
+        
+        section:nth-of-type(4){
+            height: 1020px;
+            padding: 30px 0;
+            margin: 30px 0;
+            border: 30px solid yellow;
+            width: 100%;
+            background-color: sandybrown;
+        }
+        
+        section:nth-of-type(5){
+            height: 1980px;
+            width: 100%;
+            background-color: aqua;
+        }
+
+        .haslo{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 80px;
+            width: 100%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 30px;
+            line-height: 80px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+        <section class="sekcja1"></section>
+        <section class="sekcja2"></section>
+        <section class="sekcja3"></section>
+        <section class="sekcja4"></section>
+        <section class="sekcja5"></section>
+        <div class="haslo">WITAJ NA STRONIE</div>
+<script src="/jquery-3.6.0.min.js"></script>
+<script>
+    function text(){
+
+        const scrollTop = $(document).scrollTop();
+
+        const wysokosc1 = $('.sekcja1').outerHeight(true); 
+        const wysokosc2 = $('.sekcja2').outerHeight(true);
+        const wysokosc3 = $('.sekcja3').outerHeight(true); 
+        const wysokosc4 = $('.sekcja4').outerHeight(true); 
+        const wysokosc5 = $('.sekcja5').outerHeight(true);
+        
+        const offset1 = $('.sekcja1').offset().top;
+        const offset2 = $('.sekcja2').offset().top;
+        const offset3 = $('.sekcja3').offset().top;
+        const offset4 = $('.sekcja4').offset().top;
+        const offset5 = $('.sekcja5').offset().top;
+
+        if(scrollTop<wysokosc1){
+            $('.haslo').text('sekcja1')
+        }
+        else if(scrollTop<wysokosc2 + offset2){
+            $('.haslo').text('sekcja2')
+        }
+        else if(scrollTop<wysokosc3 + offset3){
+            $('.haslo').text('sekcja3')
+        }
+        else if(scrollTop<wysokosc4 + offset4){
+            $('.haslo').text('sekcja4')
+        }
+        else{
+            $('.haslo').text('sekcja5')
+        }
+    }
+    $(document).on('scroll', text)
+</script>
+</body>
+</html>
